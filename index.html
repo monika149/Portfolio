@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monika - Cybersecurity Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white antialiased">
+    <canvas id="matrix-canvas"></canvas>
+
+    <header class="sticky top-0 z-50 bg-gray-900 bg-opacity-75 backdrop-blur-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-cyan-400 tracking-wider">M</a>
+            <ul class="hidden md:flex items-center space-x-8">
+                <li><a href="#about" class="hover:text-cyan-300 transition-colors duration-300">About</a></li>
+                <li><a href="#skills" class="hover:text-cyan-300 transition-colors duration-300">Skills</a></li>
+                <li><a href="#projects" class="hover:text-cyan-300 transition-colors duration-300">Projects</a></li>
+                <li><a href="#contact" class="bg-cyan-500 text-gray-900 px-4 py-2 rounded-md hover:bg-cyan-400 transition-colors duration-300 font-semibold">Contact</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-center hover:text-cyan-300 transition-colors duration-300">About</a>
+            <a href="#skills" class="block py-2 text-center hover:text-cyan-300 transition-colors duration-300">Skills</a>
+            <a href="#projects" class="block py-2 text-center hover:text-cyan-300 transition-colors duration-300">Projects</a>
+            <a href="#contact" class="block mt-2 py-2 text-center bg-cyan-500 text-gray-900 rounded-md hover:bg-cyan-400 transition-colors duration-300 font-semibold">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 relative z-10">
+
+        <section id="hero" class="min-h-screen flex items-center">
+            <div class="max-w-3xl">
+                <p class="text-lg text-cyan-400 font-mono animate__animated animate__fadeInDown">Hi, my name is</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-white my-4 animate__animated animate__fadeIn animate__delay-1s">Monika.</h1>
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-400 animate__animated animate__fadeInUp animate__delay-1s">I secure the digital world.</h2>
+                <p class="mt-6 text-lg max-w-xl animate__animated animate__fadeInUp animate__delay-2s">
+                    A dedicated cybersecurity student with a passion for ethical hacking, network security, and cryptography. I'm focused on defending systems and analyzing threats.
+                </p>
+                <div class="mt-8 flex gap-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#projects" class="bg-cyan-500 text-gray-900 px-6 py-3 rounded-md text-lg font-semibold hover:bg-cyan-400 transition-all duration-300 transform hover:scale-105">View My Projects</a>
+                </div>
+            </div>
+        </section>
+
+       <section id="about" class="py-20 md:py-32 reveal">
+    <h2 class="section-title"><span class="text-cyan-400">01.</span> About Me</h2>
+    <div class="grid md:grid-cols-5 gap-12 items-center">
+        <div class="md:col-span-3 text-lg">
+            <p class="mb-4">
+                I am a cybersecurity postgraduate with a minor in AI/ML, skilled in VAPT, ethical hacking, and security engineering. My passion lies in building and defending digital systems, and I'm constantly exploring the intersection of security and artificial intelligence.
+            </p>
+            <p class="mb-4">
+                From capturing network packets to developing secure applications, I enjoy the constant challenge of staying one step ahead of malicious actors and contributing to a safer digital environment.
+            </p>
+            <p>Here are a few technologies I'm proficient with:</p>
+            <ul class="mt-4 grid grid-cols-2 gap-2 text-gray-300 font-mono">
+                <li class="flex items-center gap-2"><span class="text-cyan-400">▹</span>Nmap & Nessus</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">▹</span>Burp Suite</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">▹</span>Metasploit</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">▹</span>Wireshark</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">▹</span>Python & Java</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">▹</span>Linux & Windows</li>
+            </ul>
+        </div>
+        <div class="md:col-span-2 relative group w-full max-w-sm mx-auto">
+            <div class="absolute inset-0 bg-cyan-600 rounded-lg transform -rotate-3 group-hover:rotate-0 transition-transform duration-300 blur-md"></div>
+            <img src="https://placehold.co/500x500/083344/e0f2fe?text=Monika" alt="A photo of Monika" class="rounded-lg relative z-10 w-full border-2 border-cyan-700" onerror="this.onerror=null;this.src='https.onerror=null;this.src='https://placehold.co/500x500/083344/e0f2fe?text=Error';'">
+        </div>
+    </div>
+</section>
+
+        <section id="skills" class="py-20 md:py-32 reveal">
+            <h2 class="section-title"><span class="text-cyan-400">02.</span> Core Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-white">Penetration Testing</h3>
+                    <p class="mt-2 text-gray-400">Web app, network, and wireless vulnerability assessments. Proficient with Burp Suite, Metasploit, and manual testing techniques.</p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-white">Network Security</h3>
+                    <p class="mt-2 text-gray-400">Firewall configuration, IDS/IPS monitoring, and secure network architecture design. Experience with Wireshark and Snort.</p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-white">Scripting & Automation</h3>
+                    <p class="mt-2 text-gray-400">Automating security tasks and developing custom tools using Python, Bash, and PowerShell.</p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-white">Incident Response</h3>
+                    <p class="mt-2 text-gray-400">Analyzing logs, identifying indicators of compromise (IOCs), and performing forensic analysis on affected systems.</p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-white">Cryptography</h3>
+                    <p class="mt-2 text-gray-400">Understanding of symmetric/asymmetric encryption, hashing algorithms, and public key infrastructure (PKI).</p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-white">Threat Intelligence</h3>
+                    <p class="mt-2 text-gray-400">Collecting and analyzing data on emerging threats to provide actionable security recommendations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 md:py-32 reveal">
+    <h2 class="section-title"><span class="text-cyan-400">03.</span> Featured Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="project-card group">
+            <h3 class="text-xl font-bold text-white mt-4 group-hover:text-cyan-400 transition-colors duration-300">Threat Intelligence Simulator</h3>
+            <p class="mt-2 text-gray-400">An aggregator to automate collecting and analyzing IP reputation data from sources like AbuseIPDB and VirusTotal using n8n workflows.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 font-mono">
+                <li class="tech-tag">n8n</li>
+                <li class="tech-tag">APIs</li>
+                <li class="tech-tag">Threat Intel</li>
+            </ul>
+        </div>
+
+        <div class="project-card group">
+            <h3 class="text-xl font-bold text-white mt-4 group-hover:text-cyan-400 transition-colors duration-300">SecureAudit ISO 27001 Checker </h3>
+            <p class="mt-2 text-gray-400">A Flask-based audit platform with multi-role access and an AI LLM for remediation suggestions and report summaries.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 font-mono">
+                <li class="tech-tag">Flask</li>
+                <li class="tech-tag">ISO 27001</li>
+                <li class="tech-tag">AI/ML</li>
+            </ul>
+        </div>
+
+        <div class="project-card group">
+            <h3 class="text-xl font-bold text-white mt-4 group-hover:text-cyan-400 transition-colors duration-300">CoreZ Chain Storage </h3>
+            <p class="mt-2 text-gray-400">A secure SFTP system with blockchain integration to immutably store file hashes, ensuring data integrity across environments.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 font-mono">
+                <li class="tech-tag">Blockchain</li>
+                <li class="tech-tag">SFTP</li>
+                <li class="tech-tag">Security</li>
+            </ul>
+        </div>
+
+        <div class="project-card group">
+            <h3 class="text-xl font-bold text-white mt-4 group-hover:text-cyan-400 transition-colors duration-300">Network Packet Sniffer </h3>
+            <p class="mt-2 text-gray-400">A custom tool built to capture and analyze TCP, UDP, and ICMP packets to aid in the detection of malicious network traffic.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 font-mono">
+                <li class="tech-tag">Python</li>
+                <li class="tech-tag">Networking</li>
+                <li class="tech-tag">Security</li>
+            </ul>
+        </div>
+
+        <div class="project-card group">
+            <h3 class="text-xl font-bold text-white mt-4 group-hover:text-cyan-400 transition-colors duration-300">Image Encryptor </h3>
+            <p class="mt-2 text-gray-400">A tool designed to secure digital assets by using byte-level manipulation, showcasing knowledge of cryptography.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 font-mono">
+                <li class="tech-tag">Cryptography</li>
+                <li class="tech-tag">Python</li>
+                <li class="tech-tag">Data Protection</li>
+            </ul>
+        </div>
+        
+        <div class="project-card group">
+            <h3 class="text-xl font-bold text-white mt-4 group-hover:text-cyan-400 transition-colors duration-300">Microsoft AI Copilot WebApp </h3>
+            <p class="mt-2 text-gray-400">A web application created during a hackathon that utilizes Azure OpenAI and Cosmos DB resources.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 font-mono">
+                <li class="tech-tag">Azure</li>
+                <li class="tech-tag">OpenAI</li>
+                <li class="tech-tag">Hackathon</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="events" class="py-20 md:py-32 reveal">
+    <h2 class="section-title"><span class="text-cyan-400">04.</span> Upcoming Events</h2>
+    <div class="bg-gray-800 bg-opacity-50 border border-cyan-400/20 rounded-lg p-8 max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-bold text-cyan-300 mb-2">Upcoming Workshop: Cybersecurity Lab Deployment</h3>
+        <p class="text-lg text-gray-300">
+            In the upcoming month, I will be co-delivering a hands-on workshop at Jain University. This session involves setting up a full-scale cybersecurity lab using open-source tools. We will provide students with live demonstrations of scanning, exploitation, and forensic investigation across Red Team, Blue Team, and Digital Forensics environments.
+        </p>
+    </div>
+</section>
+
+<section id="interests" class="py-20 md:py-32 reveal">
+    <h2 class="section-title"><span class="text-cyan-400">05.</span> Interests</h2>
+    <div class="max-w-4xl mx-auto">
+        <p class="text-center text-lg mb-8">Beyond the terminal, I'm passionate about creative and strategic challenges. Some of my interests include:</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center font-mono">
+            <div class="p-4 bg-gray-800 rounded-lg">
+                <span class="text-4xl">👾</span>
+                <p class="mt-2">CTFs & Gaming </p>
+            </div>
+            <div class="p-4 bg-gray-800 rounded-lg">
+                <span class="text-4xl">📸</span>
+                <p class="mt-2">Photography </p>
+            </div>
+            <div class="p-4 bg-gray-800 rounded-lg">
+                <span class="text-4xl">✍️</span>
+                <p class="mt-2">Poetry </p>
+            </div>
+            <div class="p-4 bg-gray-800 rounded-lg">
+                <span class="text-4xl">🎨</span>
+                <p class="mt-2">Drawing </p>
+            </div>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-6">Galleries and write-ups coming soon!</p>
+    </div>
+</section>
+
+        <section id="contact" class="py-20 md:py-32 text-center reveal">
+            <h2 class="section-title justify-center"><span class="text-cyan-400">06.</span> Get In Touch</h2>
+            <h3 class="text-5xl font-bold text-white mb-4">Connect With Me</h3>
+            <p class="max-w-xl mx-auto text-lg mb-8">
+                I'm always open to discussing cybersecurity, new projects, or potential opportunities. Feel free to reach out.
+            </p>
+            <a href="mailto:Monika.carter.sec@example.com" class="inline-block bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-md text-lg font-semibold hover:bg-cyan-500 hover:text-black transition-all duration-300 transform hover:scale-105">
+                Say Hello
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="py-8 text-center text-gray-500 relative z-10">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="#" class="hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V22"/></svg></a>
+            <a href="#" class="hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+        <p class="font-mono">Designed & Built by Monika</p>
+    </footer>
+
+    <button id="scroll-to-top" class="fixed bottom-5 right-5 hidden bg-cyan-500 text-black p-3 rounded-full shadow-lg hover:bg-cyan-400 transition-all duration-300 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+    </button>
+    
+    <script src="matrix.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
