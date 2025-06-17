@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Monika</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white antialiased">
+    <canvas id="matrix-canvas"></canvas>
+
+    <header class="sticky top-0 z-50 bg-gray-900 bg-opacity-75 backdrop-blur-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-cyan-400 tracking-wider">M</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 relative z-10 py-16">
+
+        <a href="index.html#projects" class="text-cyan-400 font-mono hover:underline mb-8 inline-block">&larr; Back to All Projects</a>
+
+        <h1 class="text-5xl font-bold text-white">Project Name Placeholder</h1>
+        <div class="mt-4 flex flex-wrap gap-2 font-mono">
+            <span class="tech-tag">Tech 1</span>
+            <span class="tech-tag">Tech 2</span>
+            <span class="tech-tag">Tech 3</span>
+        </div>
+
+        <div class="mt-12 text-lg text-gray-300 max-w-4xl">
+            <p class="mb-4">This is where the detailed description of your project will go. You can explain the problem you were trying to solve, your approach, and the key challenges you faced.</p>
+        </div>
+
+        <div class="mt-12">
+            <h2 class="text-3xl font-bold text-white mb-6">Screenshots</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <img src="https://placehold.co/1200x800/1e293b/94a3b8?text=Screenshot+1" alt="Project screenshot 1" class="rounded-lg border-2 border-gray-700">
+                <img src="https://placehold.co/1200x800/1e293b/94a3b8?text=Screenshot+2" alt="Project screenshot 2" class="rounded-lg border-2 border-gray-700">
+            </div>
+        </div>
+
+        <div class="mt-12">
+            <h2 class="text-3xl font-bold text-white mb-6">Interactive Demo</h2>
+            <div class="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center bg-gray-800/50">
+                <h3 class="text-xl text-gray-400">Live Demo Sandbox</h3>
+                <p class="mt-2 text-gray-500">This is a placeholder for an interactive component. This area could host an iframe, a terminal emulator, or a simple input form to allow users to interact with the project live.</p>
+            </div>
+        </div>
+
+    </main>
+    <script src="matrix.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
