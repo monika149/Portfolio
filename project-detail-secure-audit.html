@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAudit ISO 27001 - Monika's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white antialiased">
+    <header class="sticky top-0 z-50 bg-gray-900 bg-opacity-75 backdrop-blur-md">
+        <nav class="container mx-auto px-6 py-4">
+            <a href="index.html" class="text-2xl font-bold text-cyan-400 tracking-wider">← Back to Projects</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 relative z-10">
+        <article class="max-w-4xl mx-auto">
+            <header class="mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">🧠 SecureAudit – ISO 27001 Compliance Tracker</h1>
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">AI/LLM</span>
+                    <span class="tech-tag">ISO 27001</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">Ollama</span>
+                </div>
+                <p class="text-xl text-gray-300">A Flask-based platform I co-developed with a teammate to help organizations manage their ISO 27001 control status. My focus was on user experience, AI integration, and workflow, while my teammate handled backend logic and database design.</p>
+            </header>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold mb-6">Why We Built It</h2>
+                <div class="prose prose-invert max-w-none">
+                    <p>From my experience working on compliance projects, I saw how static spreadsheets and manual checklists can slow teams down. We wanted to build something smarter—so we combined our strengths: my teammate architected a robust backend, and I designed the interface and integrated AI to make remediation and reporting easier.</p>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold mb-6">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Multi-Role Access</h3>
+                        <p>Role-based access for auditors, compliance officers, and admins. Each user sees only what’s relevant to their responsibilities, keeping the workflow focused and secure.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">AI-Powered Remediation</h3>
+                        <p>I integrated Ollama LLM to generate tailored remediation steps for failed controls and to summarize audit findings in plain language.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Compliance Dashboard</h3>
+                        <p>I designed a dashboard that gives a real-time snapshot of compliance status, pending actions, and historical trends.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">Automated Reporting</h3>
+                        <p>With a single click, users can generate comprehensive reports, complete with AI-generated recommendations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold mb-6">Technical Implementation</h2>
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4">How We Built It</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-300">
+                        <li>The backend, built by my teammate, uses Flask and SQLite for data management, with JWT authentication and bcrypt for password security.</li>
+                        <li>I handled the frontend using Tailwind CSS for a clean, modern look, and managed the integration with a locally running Ollama LLM instance for AI-powered features.</li>
+                        <li>We prioritized security throughout: RBAC, input sanitization, CSRF protection, and secure session management were all implemented.</li>
+                        <li>I worked closely with my teammate to ensure the frontend and backend communicated smoothly and securely.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold mb-6">Challenges & What I Learned</h2>
+                <div class="space-y-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3">RBAC & Collaboration</h3>
+                        <p>One of our biggest challenges was designing a flexible RBAC system that could adapt to different organizational structures. I spent a lot of time tuning AI prompts to get useful, actionable remediation advice, while my teammate ensured data consistency and robust backend logic. Collaborating on this project taught me a lot about bridging technical and user-facing aspects, and how to use AI responsibly to support (not replace) human decision-making.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold mb-6">Future Enhancements</h2>
+                <ul class="list-disc pl-6 space-y-2 text-gray-300">
+                    <li>Support for other frameworks like SOC 2 and GDPR</li>
+                    <li>Advanced analytics and automated evidence collection</li>
+                    <li>API integrations with third-party security tools</li>
+                    <li>Custom compliance template builder</li>
+                </ul>
+            </section>
+
+            <div class="bg-red-900 bg-opacity-50 border border-red-400 rounded-lg p-6 mt-8">
+                <h3 class="text-xl font-bold mb-3 text-red-400">⚠️ Usage Disclaimer</h3>
+                <p class="text-gray-300">SecureAudit is intended for educational and professional use in authorized environments only. Please ensure you have proper permission before conducting any compliance assessments, and always verify AI-generated suggestions with a human expert.</p>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
